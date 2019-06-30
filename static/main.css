@@ -1,0 +1,36 @@
+.center {
+  text-align: center;
+}
+.section {
+  margin: 10px auto;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+.button-small {
+  font-size: 70%;
+}
+.button-huge {
+  font-size: 200%;
+}
+.button-colored {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.display-if-disconnected,
+.display-if-connecting,
+.display-if-connected {
+  display: none;
+}
+.cube-disconnected .display-if-disconnected {
+  display: block;
+}
+.cube-connecting .display-if-connecting {
+  display: block;
+}
+.cube-connected .display-if-connected {
+  display: block;
+}

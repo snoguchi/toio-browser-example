@@ -1,0 +1,30 @@
+{
+  "name": "toio-browser-example",
+  "version": "1.0.0",
+  "description": "toio.js example for web browsers",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --https --open",
+    "server": "webpack-dev-server --https --host 0.0.0.0",
+    "format": "prettier --write {src,static}/**/*.js"
+  },
+  "keywords": [
+    "toio"
+  ],
+  "author": "Shinsuke Noguchi <shinsuke.noguchi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "prettier": "^1.18.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@toio/scanner": "^1.0.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 140
+  }
+}
