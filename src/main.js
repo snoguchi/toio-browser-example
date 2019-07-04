@@ -1,18 +1,5 @@
+import './android-ble-patch';
 import { NearestScanner } from '@toio/scanner';
-
-// workaround for android. see https://bit.ly/2XE87Z0
-if (/android/i.test(navigator.userAgent)) {
-  const mutexify = (promiseFn, mutex = Promise.resolve()) => {
-    return function(...args) {
-      const job = () => promiseFn.apply(this, args);
-      return (mutex = mutex.then(job, job));
-    };
-  };
-  const proto = BluetoothRemoteGATTCharacteristic.prototype;
-  const mutex = Promise.resolve();
-  proto.startNotifications = mutexify(proto.startNotifications, mutex);
-  proto.readValue = mutexify(proto.readValue, mutex);
-}
 
 let cube = null;
 
