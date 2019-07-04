@@ -6,7 +6,7 @@
     "build": "webpack",
     "start": "webpack-dev-server --https --open",
     "server": "webpack-dev-server --https --host 0.0.0.0",
-    "format": "prettier --write {src,static}/**/*.js"
+    "format": "prettier --write src/**/*.js"
   },
   "keywords": [
     "toio"
@@ -25,6 +25,6 @@
   },
   "prettier": {
     "singleQuote": true,
-    "printWidth": 140
+    "printWidth": 160
   }
 }
